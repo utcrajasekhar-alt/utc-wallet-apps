@@ -1,0 +1,10 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+body { @apply bg-ink text-slate-200 font-sans antialiased; }
+.grad { background: linear-gradient(120deg, #3B82F6, #8B5CF6); }
+.grad-text { background: linear-gradient(120deg, #22D3EE, #3B82F6 50%, #8B5CF6); -webkit-background-clip: text; color: transparent; }
+.card { @apply rounded-2xl border border-line bg-panel p-6; }
+.btn { @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan; }
+.input { @apply w-full rounded-xl border border-line bg-ink px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue; }
+@keyframes drift { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-14px) } }
+.drift { animation: drift 6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .drift { animation: none } * { scroll-behavior: auto !important } }
